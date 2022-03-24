@@ -1,0 +1,31 @@
+package com.simplilearn.demo;
+import java.util.*;
+
+public class emailId {
+		public static void main(String[] args) {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("enter emial");
+			String[] a={"abc@gmail.com","xyz@gmail.com","nik@gmail.com","sri@gmail.com"};
+			List<String> list=new ArrayList<String>();  
+	        for(String i:a){  
+	            list.add(i);  
+	        } 
+	        String userEmail=sc.next();
+	        searchEmail(userEmail,list);
+	        }
+	        public static void searchEmail(String userEmail, List<String> list)
+	        {
+	            int flag=0;
+	            for(String str: list) {
+	                if (str.contains(userEmail)) {
+	                    System.out.println("Found the entered Email");
+	                    flag=1;
+	                }
+	            }
+	            if(flag==0)
+	            {
+	                System.out.println("Not found in existing email id's");
+	            }
+	        }
+		
+	}
